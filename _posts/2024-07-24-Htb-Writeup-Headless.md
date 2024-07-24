@@ -129,7 +129,7 @@ Vemos que en el sitio web que esta por el puerto 5000 esta ejecutando Werkzeug c
 http://10.10.11.8:5000 [200 OK] Cookies[is_admin], Country[RESERVED][ZZ], HTML5,HTTPServer[Werkzeug/2.2.2 Python/3.11.2], IP[10.10.11.8], Python[3.11.2], Script, Title[Under Construction], Werkzeug[2.2.2]
 ```
 Visitando la pagina web `http://10.10.11.8:5000` muestra que la pagina esta en construcción, junto a una cuenta regresiva
-![Pasted image 20240724102545](/blob/master/assets/images-Headless/Pasted image 2020240724102545.png)
+![Pasted image 20240724102545](/blob/master/assets/images-Headless/Headless1.png)
 Si hacemos Click en `For questions`, vemos que nos lleva a  `http://10.10.11.8:5000/support` donde podemos ver un formulario de contacto.
 ![[Pasted image 20240724103153.png]]
 Pruebo para ver si algunos parámetros en el formulario de contactos son vulnerables, entonces intercepto la solicitud con Burpsuite e intento un ataque `Cross Site Scripting`:
