@@ -129,7 +129,7 @@ Vemos que en el sitio web que esta por el puerto 5000 esta ejecutando Werkzeug c
 http://10.10.11.8:5000 [200 OK] Cookies[is_admin], Country[RESERVED][ZZ], HTML5,HTTPServer[Werkzeug/2.2.2 Python/3.11.2], IP[10.10.11.8], Python[3.11.2], Script, Title[Under Construction], Werkzeug[2.2.2]
 ```
 Visitando la pagina web `http://10.10.11.8:5000` muestra que la pagina esta en construcción, junto a una cuenta regresiva
-![[Pasted image 20240724102545.png]]
+![Pasted image 20240724102545](/blob/master/assets/images-Headless/Pasted image 2020240724102545.png)
 Si hacemos Click en `For questions`, vemos que nos lleva a  `http://10.10.11.8:5000/support` donde podemos ver un formulario de contacto.
 ![[Pasted image 20240724103153.png]]
 Pruebo para ver si algunos parámetros en el formulario de contactos son vulnerables, entonces intercepto la solicitud con Burpsuite e intento un ataque `Cross Site Scripting`:
@@ -151,7 +151,7 @@ Upgrade-Insecure-Requests: 1
 
 fname=tets&lname=test&email=test%40test.com&phone=test&message=<img+src%3d"http%3a//10.10.16.36%3a4545/symmetry3">
 ```
-![Pasted image 20240724110113.png](_posts/images-Headless/Pasted image 20240702410113.png)
+![Pasted image 20240724110113.png](https://github.com/Symmetry30/symmetry30.github.io/blob/master/assets/images-Headless/Pasted%20image%2020240724102545.png)
 Nos muestra un mensaje de `Hacking Attempt Detected`, donde nos indica que los administradores nos investigaran.
 - En este punto verifique con `gobuster` si no hay otras paginas o directorios: 
 ```bash
