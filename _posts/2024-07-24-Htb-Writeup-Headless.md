@@ -1,5 +1,5 @@
 ---
-title: HTB Writup Headless
+title: HTB Writeup Headless
 published: true
 ---
 
