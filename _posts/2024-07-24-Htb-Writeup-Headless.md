@@ -2,6 +2,10 @@
 title: HTB Writup Headless
 published: true
 ---
+# [](#header-1)HTB Writup Headless
+
+![Headless](../assets/images-Headless/Headless1.png)
+
 ---------------
 - Tags:  XSS RCE HTB Easy Burpsuite Whatweb Linux Sudo
 --------------
@@ -129,6 +133,7 @@ Vemos que en el sitio web que esta por el puerto 5000 esta ejecutando Werkzeug c
 http://10.10.11.8:5000 [200 OK] Cookies[is_admin], Country[RESERVED][ZZ], HTML5,HTTPServer[Werkzeug/2.2.2 Python/3.11.2], IP[10.10.11.8], Python[3.11.2], Script, Title[Under Construction], Werkzeug[2.2.2]
 ```
 Visitando la pagina web `http://10.10.11.8:5000` muestra que la pagina esta en construcción, junto a una cuenta regresiva
+
 ![Pasted image 20240724102545](../assets/images-Headless/Headless1.png)
 
 Si hacemos Click en `For questions`, vemos que nos lleva a  `http://10.10.11.8:5000/support` donde podemos ver un formulario de contacto.
@@ -340,7 +345,7 @@ dvir@headless:~/app$ export TERM=xterm
 dvir@headless:~/app$ export SHELL=/bin/bash
 dvir@headless:~/app$ stty rows 29 columns 128
 ```
-- En stty rows columns deberan fijarse la proprosiones de su consola en una ventana aparte con
+- En stty rows columns deberan fijarse la proprorciones de su consola en una ventana aparte con
 `stty size`
 [Pasted image 20240724122717.png](../assets/images-Headless/Headless11.png)
 Ahora vemos la flags del usario
