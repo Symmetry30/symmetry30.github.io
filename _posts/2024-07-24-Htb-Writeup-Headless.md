@@ -1,13 +1,13 @@
 ---
 title: HTB Writup Headless
 published: true
+tags: ["XSS" "RCE" "HTB" "Easy" "Burpsuite" "Whatweb" "Linux" "Sudo"]
 ---
 # [](#header-1)HTB Writup Headless
 
-![Headless](../assets/images-Headless/Headless.png)
+  ![Headless](../assets/images-Headless/Headless.png)
 
----------------
-- Tags: ["XSS" "RCE" "HTB" "Easy" "Burpsuite" "Whatweb" "Linux" "Sudo"]
+
 --------------
 # [](#header-1)Reconocimiento
 
