@@ -4,7 +4,7 @@ published: true
 ---
 # [](#header-1)HTB Writup Headless
 
-![Headless](../assets/images-Headless/Headless1.png)
+![Headless](../assets/images-Headless/Headless.png)
 
 ---------------
 - Tags:  XSS RCE HTB Easy Burpsuite Whatweb Linux Sudo
