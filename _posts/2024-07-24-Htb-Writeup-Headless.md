@@ -2,9 +2,8 @@
 title: HTB Writup Headless
 published: true
 ---
-# [](#header-1)HTB Writup Headless
 
-  ![Headless](../assets/images-Headless/Headless.png)
+![Headless](../assets/images-Headless/Headless.png)
 
 
 --------------
