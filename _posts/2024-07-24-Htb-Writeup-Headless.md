@@ -347,7 +347,7 @@ dvir@headless:~/app$ stty rows 29 columns 128
 ```
 - En stty rows columns deberan fijarse la proprorciones de su consola en una ventana aparte con
 `stty size`
-[Pasted image 20240724122717.png](../assets/images-Headless/Headless11.png)
+![Pasted image 20240724122717.png](../assets/images-Headless/Headless11.png)
 Ahora vemos la flags del usario
 ```bash
 dvir@headless:~$ cat user.txt 
