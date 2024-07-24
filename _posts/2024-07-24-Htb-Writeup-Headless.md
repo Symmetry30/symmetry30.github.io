@@ -1,7 +1,6 @@
 ---
 title: HTB Writup Headless
 published: true
-tags: ["XSS" "RCE" "HTB" "Easy" "Burpsuite" "Whatweb" "Linux" "Sudo"]
 ---
 # [](#header-1)HTB Writup Headless
 
