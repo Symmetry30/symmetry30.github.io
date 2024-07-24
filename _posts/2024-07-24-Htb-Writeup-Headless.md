@@ -130,8 +130,10 @@ http://10.10.11.8:5000 [200 OK] Cookies[is_admin], Country[RESERVED][ZZ], HTML5,
 ```
 Visitando la pagina web `http://10.10.11.8:5000` muestra que la pagina esta en construcción, junto a una cuenta regresiva
 ![Pasted image 20240724102545](../assets/images-Headless/Headless1.png)
+
 Si hacemos Click en `For questions`, vemos que nos lleva a  `http://10.10.11.8:5000/support` donde podemos ver un formulario de contacto.
-![[Pasted image 20240724103153.png]]
+![Pasted image 20240724103153.png](../assets/images-Headless/Headless2.png)
+
 Pruebo para ver si algunos parámetros en el formulario de contactos son vulnerables, entonces intercepto la solicitud con Burpsuite e intento un ataque `Cross Site Scripting`:
 ```
 POST /support HTTP/1.1
