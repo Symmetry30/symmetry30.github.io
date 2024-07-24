@@ -7,7 +7,7 @@ published: true
 ![Headless](../assets/images-Headless/Headless.png)
 
 ---------------
-- Tags:  XSS RCE HTB Easy Burpsuite Whatweb Linux Sudo
+- Tags: ["XSS" "RCE" "HTB" "Easy" "Burpsuite" "Whatweb" "Linux" "Sudo"]
 --------------
 # [](#header-1)Reconocimiento
 
@@ -345,9 +345,10 @@ dvir@headless:~/app$ export TERM=xterm
 dvir@headless:~/app$ export SHELL=/bin/bash
 dvir@headless:~/app$ stty rows 29 columns 128
 ```
-- En stty rows columns deberan fijarse la proprorciones de su consola en una ventana aparte con
-`stty size`
+- En stty rows columns deberan fijarse la proprorciones de su consola en una ventana aparte con `stty size`
+
 ![Pasted image 20240724122717.png](../assets/images-Headless/Headless11.png)
+
 Ahora vemos la flags del usario
 ```bash
 dvir@headless:~$ cat user.txt 
