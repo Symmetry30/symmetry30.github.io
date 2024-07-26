@@ -61,7 +61,7 @@ MAC Address: AE:AB:06:6A:71:FC (Unknown)
 ```
 Vamos a la pagina web por el puerto 80 donde tenemos capacidad de directory listing que tiene un recurso llamado backup.txt
 
-![Pasted image 20240724210723.png](../assets/images-Picadill/Picadilly1.png)
+![Pasted image 20240724210723.png](../assets/images-Picadilly/Picadilly1.png)
 
 Este recurso vemos que hay una contraseña que esta en cifrado cesar 
 
