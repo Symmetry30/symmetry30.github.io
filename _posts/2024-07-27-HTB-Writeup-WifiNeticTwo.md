@@ -1,6 +1,6 @@
 ---
 Title: HTB Writeup WifiNeticTwo
-published: false
+published: true
 ---
 
 ![logo](../assets/images-WifineticTwo/WifiNeticTwo.png)
