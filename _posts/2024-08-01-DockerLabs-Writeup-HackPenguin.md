@@ -108,7 +108,7 @@ StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
 [i] Original filename: "penguin.kdbx".
 [i] Extracting to "penguin.jpg.out".
 ```
-Vemos que por destras habia un archivo con extension `kdbx` y la passphrase era `chocolate`. Si probamos es passa en `keepassxc` veremos que nos da error, por lo tanto intentaremos crackear la contraseña del archivo `KeePass`.
+Vemos que por destras habia un archivo con extension `kdbx` y la passphrase era `chocolate`. Si probamos esa pass en `keepassxc` veremos que nos da error, por lo tanto intentaremos crackear la contraseña del archivo `KeePass`.
 Una vez tenemos el hash podemos intentar crackearlo con john
 ```bash
 ❯ keepass2john penguin.kdbx > hash
