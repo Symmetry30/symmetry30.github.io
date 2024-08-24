@@ -3,7 +3,7 @@ title: HTB Writeup Runner
 published: True
 ---
 ----------------
-![Logo](..assets/images-Runner/Logo.png)
+![Logo](../assets/images-Runner/Logo.png)
 
 Runner es una máquina de dificultad media en la que generé una lista personalizada de palabras clave para realizar fuzzing de subdominios. Una vez identificado el subdominio, utilicé la vulnerabilidad CVE-2023-42793 para crear un nuevo usuario administrador y acceder al panel de administración. Aproveché la funcionalidad de backup para obtener una clave id_rsa, lo que me permitió conectarme vía SSH. Finalmente, escalé privilegios a root mediante el uso de Portainer.
 
