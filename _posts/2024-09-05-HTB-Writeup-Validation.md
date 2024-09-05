@@ -88,7 +88,7 @@ Al darle a `Join Now`veo en la pagina `Welcome admin` y que agrega el usuario qu
 
 ![Intercept](../assets/images-Validation/Intercept.png)
 
-Intercepte la solicitud veo que se esta envíando una solicitud con metodo `POST` `/` esto redirige a `/account.php` por lo tantoveo que si ejecuta PHP, intentare una injeccion SQLI en el parametro username
+Intercepte la solicitud veo que se esta envíando una solicitud con metodo `POST` `/` esto redirige a `/account.php` por lo tanto veo que si ejecuta PHP, intentare una injeccion SQLI en el parametro username
 
 ![Intercept2](../assets/images-Validation/Intercept2.png)
 
@@ -101,6 +101,7 @@ Al probar con usuario admin y colocando la comilla en country
 ![SQLi](../assets/images-Validation/SQLI2.png)
 
 En la web veo que me quita el usuario admin por lo tanto puedo aprovecharme de esto y ver si me devuelve un error pero puedo suponer que la query se esta enviando de la siguiente manera
+
 ```SQL
 select username from players where country = '[input]';
 ```
