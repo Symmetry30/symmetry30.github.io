@@ -67,6 +67,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 - *-p22,80,4566,8080*: Le indicamos que queremos escanear los puerto 22,80,4566,8080
 - *sCV*: Le indicamos con que queremos lanzar un script básicos de reconocimiento y, detectar la versión y servicios que corren para los puertos 20,80,4566 y 8000
 - *oN*: Exportarlo en forma normal tal y como nos lo reporta Nmap
+
 Veo que por el puerto 22 esta `SSH` que nos reporta el condéname(8.2p1 Ubuntu 4ubuntu0.3) de Ubuntu y gracias a esto puedo descubrir que estamos frente a un `Ubuntu focal`, mas de eso por aquí no puedo hacer nada, en el puerto 80 veo que hay una pagina web, con `whatweb` voy a ver las tecnologías que corren por detrás de esta pagina web
 ```bash
 ❯ whatweb http://10.10.11.116
