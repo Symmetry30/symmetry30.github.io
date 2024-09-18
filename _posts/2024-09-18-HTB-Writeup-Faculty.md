@@ -6,7 +6,7 @@ Published: True
 
 ![Logo](../assets/images-Faculty/Logo.png)
 
-Faculty es una maquina de dificultad que se encuentra retirada en plataforma de HackThebox, en la cual podemos acceder al panel de administración por una inyección típica de SQLI pero antes probamos scriptear en Python para explotar un SQLI time based con el cual encontramos un hash en MD5 pero no logramos crackear, luego explotamos un LFI(Local File Inclusion) atreves de mpdf, para hacer movimiento lateral para acceder a otro usuario explotamos Meta-git y para escalar git nos aprovechamos de gdb que tiene asignado la capabilitie cap_sys_ptrace+ep
+Faculty es una maquina de dificultad que se encuentra retirada en plataforma de HackThebox, en la cual podemos acceder al panel de administración por una inyección típica de SQLI pero antes probamos scriptear en Python para explotar un SQLI time based con el cual encontramos un hash en MD5 pero no logramos crackear, luego explotamos un LFI(Local File Inclusion) atreves de mpdf, para hacer movimiento lateral para acceder a otro usuario explotamos Meta-git y para escalar a root nos aprovechamos de gdb que tiene asignado la capabilitie cap_sys_ptrace+ep
 
 ------------------------------------
 # Reconocimiento
